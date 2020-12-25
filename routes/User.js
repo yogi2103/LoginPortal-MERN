@@ -9,9 +9,9 @@ const Todo = require('../models/Todo');
 
 const signToken = userID =>{
     return JWT.sign({
-        iss : "NoobCoder",
+        iss : "Yogi2103",
         sub : userID
-    },"NoobCoder",{expiresIn : "1h"});
+    },"Yogi2103",{expiresIn : "1h"});
 }
 
 userRouter.post('/register',(req,res)=>{
