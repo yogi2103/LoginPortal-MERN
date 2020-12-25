@@ -11,6 +11,10 @@ mongoose.connect('mongodb+srv://yogi:21032103@cluster0.nmyxz.mongodb.net/mernaut
 .then(() => console.log("Database Connected Successfully"))
 .catch(err => console.log(err));
 
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+}
+
 const userRouter = require('./routes/User');
 app.use('/user',userRouter);
 
